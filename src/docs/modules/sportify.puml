@@ -1,0 +1,23 @@
+@startuml
+skinparam componentStyle uml2
+
+component Sportify <<external>> 
+component iTunester <<external>> 
+component CreateActivity <<web service>>
+component SongUploader <<event service>>
+
+database ActivityCache <<schema>>
+database CentralSchema <<schema>>
+
+queue UploadQueue <<point-to-point>>
+
+Sportify --> IActivity : REST
+IActivity -- CreateActivity
+CreateActivity --|> ActivityCache : write
+CreateActivity ..> UploadQueue 
+UploadQueue ..> SongUploader 
+CentralSchema --|> ActivityCache : sync
+ActivityCache --|> CentralSchema : sync
+SongUploader --> iTunester : REST
+
+@enduml

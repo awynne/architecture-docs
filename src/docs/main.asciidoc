@@ -1,0 +1,80 @@
+Sample Documentation
+====================
+Feedback to: foo.bar@baz.com
+:description: PoC for microservice architecture documentation
+:library: Asciidoctor
+ifdef::asciidoctor[]
+:source-highlighter: coderay
+endif::asciidoctor[]
+:idprefix:
+//:stylesheet: asciidoc.css
+:imagesdir: images
+//:backend: docbook45
+:backend: html5
+//:doctype: book
+//:sectids!:
+:plus: &#43;
+:toc: left
+
+[role='lead']
+This is a PoC for text-based documentation using
+asciidoctor and plantuml
+
+## About This Document
+
+hey hey my my
+
+### Diagram Notation
+
+[plantuml,"component-legend",png, config="./styles.puml"]
+----
+include::legend/component.puml[]
+----
+
+[plantuml,"connector-legend",png, config="./styles.puml"]
+----
+include::legend/connector.puml[]
+----
+
+[plantuml,"deployment-legend",png, config="./styles.puml"]
+----
+include::legend/deployment.puml[]
+----
+
+## System Overview
+
+## Modules
+
+### sportify 
+
+[plantuml,"sportify",png, config="./styles.puml"]
+----
+include::modules/sportify.puml[]
+----
+
+### Animals
+
+[plantuml,"test",png]
+----
+class Animal
+class Cat 
+class Dog
+Animal <|-- Cat 
+Animal <|-- Dog
+----
+
+## Decisions
+
+This section contains a list of all 
+http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions[Architecture Decision Records]
+
+### ADR1
+
+Context
+
+Decision
+
+Status
+
+Consequences
+

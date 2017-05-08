@@ -1,0 +1,11 @@
+@startuml
+skinparam componentStyle uml2
+
+Card "Connector Legend" {
+  (a) -> (b) : REST
+  (c) .> (d) : "Asynch. Messaging"
+  (e) -|> (f) : "DB Access "
+}
+
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+skinparam componentStyle uml2
+
+Card "Component Legend" {
+  interface "Service\nContract"
+  component "Web Service" <<web service>>
+  component "Event Subscriber" <<event service>>
+  component ExternalComponent <<external>>
+  queue Queue <<point-to-point>> 
+  queue Topic <<pub-sub>> 
+  database "DB Schema" <<schema>>
+  storage "Bucket" <<S3>>
+}
+
+@enduml

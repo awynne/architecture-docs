@@ -1,0 +1,17 @@
+@startuml
+skinparam componentStyle uml2
+
+Card "Deployment Legend" {
+  package "Deployment\nArtifact" {
+    component service2
+    component service1
+  }
+  node "MySQL (RDS)" <<database>> {
+    database schema1
+  }
+  node "Tomcat" <<app server>> {
+    package "Artifact1"
+  }
+}
+
+@enduml

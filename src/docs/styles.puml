@@ -1,0 +1,9 @@
+skinparam component {
+  BackgroundColor<<external>> LightGray
+  BorderColor black
+}
+
+skinparam queue {
+  BorderColor black
+}
+
