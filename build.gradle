@@ -1,5 +1,5 @@
 /*
- * This build file is part of the docToolchain
+ * Adapted from: https://github.com/rdmueller/docToolchain
  */
 
 plugins {
